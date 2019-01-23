@@ -1,6 +1,6 @@
 # Cloud-based-Clock
 
-# NETWORK AND SERVER MANAGEMENT
+<h2> NETWORK AND SERVER MANAGEMENT </h2>
 
 
 <h3> For this homework we will design and develop a cloud-based clock with the following characteristics: </h3>
