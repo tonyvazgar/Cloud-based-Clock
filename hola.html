@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery Hello World Example</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+        function edit() { 
+            $.ajax({type: 'GET', url: 'http://localhost:3000'}).done(function(date) {
+                console.log(new Date(date));
+            });
+        }
+        console.log("Holaa");
+        edit();
+    </script>
+</head>
+<body>
+<button id="click_button">
+    Welcome to JQuery world.
+</button>
+</body>
+</html>
