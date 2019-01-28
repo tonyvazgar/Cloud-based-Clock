@@ -7,9 +7,6 @@ var now = new time.Date("July 01, 2015 22:30:00");
 //now.setTimezone("America/Chicago");
 // `.getDate()`, `.getDay()`, `.getHours()`, etc. will return values according to UTC-8
 
-
-//var prueba = (new Date()).toJSON();
-
 function getDateTime() {
 
     var date = now;
