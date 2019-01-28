@@ -9,7 +9,7 @@ function updateClock(){
     var mins = twodigits(time.getMinutes().toString());
     var seconds = twodigits(time.getSeconds().toString());
 
-    var finalClock = hours + " : " + mins + " : " + seconds;
+    var finalClock = "Local Time: " + hours + ":" + mins + ":" + seconds;
 
     local_clock.textContent = finalClock;
 }
