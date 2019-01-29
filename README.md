@@ -19,7 +19,7 @@
 </ul>
 
 
-# For this project you need:
+<h2> For this project you need: </h2>
 <p>In the server side: </p>
 <ul>
   <li>Node</li>
