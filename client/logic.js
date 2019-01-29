@@ -14,8 +14,22 @@ function localClock(){
     var mins = twodigits(time.getMinutes().toString());
     var seconds = twodigits(time.getSeconds().toString());
 
+    if (hours.length < 2) {
+        hours = '0' + hours;
+      }
+    
+      if (mins.length < 2) {
+        mins = '0' + mins;
+      }
+    
+      if (seconds.length < 2) {
+        seconds = '0' + seconds;
+      }
+
     var finalClock = "Local Time: " + hours + ":" + mins + ":" + seconds;
     local_clock.textContent = finalClock;
+    document.body.style.background = "#"+seconds+seconds+seconds;
+    console.log("#"+hours+mins+seconds);
 }
 
 function obtenerHoraMiServidor(){

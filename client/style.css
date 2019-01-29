@@ -4,10 +4,10 @@
 }
 body{
     font-family: 'myFont';
-    background-color: royalblue;
     text-align: center;
     font-size: 50px;
     font-weight: 300;
     margin-top: 200px;
+    color: white;
 }
 
