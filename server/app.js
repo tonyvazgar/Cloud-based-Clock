@@ -1,15 +1,19 @@
+/*
+ * Luis Antonio Vázquez García
+ * Archivo para representar el servidor 
+ */
 var express = require('express');
 var app = express();
 
 var time = require('time');
-var now = new time.Date("July 01, 2015 22:30:00");
-//var now = new time.Date();
+// var now = new time.Date("July 01, 2015 22:30:00");
+var now = new time.Date();
 //now.setTimezone("America/Chicago");
 // `.getDate()`, `.getDay()`, `.getHours()`, etc. will return values according to UTC-8
 
 function getDateTime() {
 
-    var date = now;
+    var date = new Date();
     var hola = JSON.stringify(date.toJSON());
     var hour = date.getHours();
     hour = (hour < 10 ? "0" : "") + hour;
@@ -22,8 +26,11 @@ function getDateTime() {
     //Para recibir en el cliente se desempaca de la siguiente mandera:
     //console.log(new Date(date.toJSON()));
     console.log(date.toJSON());
+    console.log("Regresando algo de tipo: " + typeof date.toJSON());
     return date.toJSON();
-    //return typeof hola;
+    // var horaBuena = JSON.stringify(date);
+    // return horaBuena;
+    // //return typeof hola;
     //return hour + " : " + min + " : " + sec;
 }
 
@@ -37,6 +44,14 @@ app.get('/', function (req, res) {
     //res.send('Hello World!');
     res.send(getDateTime());
 });
+
+app.get('/serverTime' , (req,res) => {
+	/**Respond to request: sending actual time in miliseconds back on JSON format*/
+	res.json({
+		data: getDateTime()
+	});
+});
+
 
 app.listen(3000, function() {
     console.log('Example app listening on port 3000!');
