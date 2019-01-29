@@ -1,3 +1,7 @@
+/*
+ * Luis Antonio Vázquez García
+ * Archivo para representar el cliente 
+ */
 var local_clock = document.getElementById('local_clock');
 var server_clock = document.getElementById('server_clock');
 var serverClockDate;
@@ -11,25 +15,8 @@ function localClock(){
     var seconds = twodigits(time.getSeconds().toString());
 
     var finalClock = "Local Time: " + hours + ":" + mins + ":" + seconds;
-
     local_clock.textContent = finalClock;
 }
-
-// var putaHora = function (){
-//     var x = null;
-//     $.ajax({
-//         type: 'GET', 
-//         url: 'http://localhost:3000',
-//         success: function(date) {
-//             console.log("FECHONOOOON" + date);
-//             x = new Date(date);
-//             // console.log("***" + x);
-//             // console.log("---------> " + typeof x);   
-//         } 
-//     });
-//     return x;
-// }();
-
 
 function obtenerHoraMiServidor(){
 	$.ajax({
@@ -105,28 +92,8 @@ function twodigits(digits){
     return digits;
 }
 
-function lc(serverDate){
-    var time = new Date();
-    console.log("********++" + serverDate);
-    var server_time = new Date(serverDate);
-    var hours = (time.getHours()%12).toString();
-    var sh = (server_time.getHours()%12).toString();
-    var mins = twodigits(time.getMinutes().toString());
-    var sm = twodigits(server_time.getMinutes().toString());
-    var seconds = twodigits(time.getSeconds().toString());
-    var ss = twodigits(server_time.getSeconds().toString());
-
-    var finalClock = "Local Time: " + hours + ":" + mins + ":" + seconds;
-    var sfinalClock = "Server Time: " + sh + ":" + sm + ":" + ss;
-
-    local_clock.textContent = finalClock;
-    server_clock.textContent = sfinalClock;
-}
-
-//obtenerHoraMiServidor();
 localClock();
 serverClock();
-//lc(sc());
 console.log("<<<<<<<<<<<>>>>" + sc());
 
 setInterval(localClock, 1000);
