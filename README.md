@@ -31,11 +31,13 @@
   <li>AJAX</li>
 </ul>
 
-# Authors
+# Author
 
 Luis Antonio Vázquez García
 <details>
     <summary> Contact </summary> 
     <a href="mailto:luis.vazquezga@udlap.mx" target="_top">luis.vazquezga@udlap.mx</a>
-    </details>
+    <a href="http://www.twitter.com/tonyvazgar">Twiiter: @tonyvazgar</a>
+    <a href="http://www.instagram.com/tonyvazgar">Instagram: @tonyvazgar</a>
+</details>
 
