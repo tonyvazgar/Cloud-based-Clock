@@ -36,8 +36,8 @@
 Luis Antonio Vázquez García
 <details>
     <summary> Contact </summary> 
-    <a href="mailto:luis.vazquezga@udlap.mx" target="_top">luis.vazquezga@udlap.mx</a>
-    <a href="http://www.twitter.com/tonyvazgar">Twiiter: @tonyvazgar</a>
-    <a href="http://www.instagram.com/tonyvazgar">Instagram: @tonyvazgar</a>
+    <a href="mailto:luis.vazquezga@udlap.mx" target="_top">luis.vazquezga@udlap.mx</a></br>
+    <a href="http://www.twitter.com/tonyvazgar">Twiiter: @tonyvazgar</a></br>
+    <a href="http://www.instagram.com/tonyvazgar">Instagram: @tonyvazgar</a></br>
 </details>
 
