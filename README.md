@@ -19,6 +19,18 @@
 </ul>
 
 
+# For this project you need:
+<p>In the server side: </p>
+<ul>
+  <li>Node</li>
+  <li>Express</li>
+</ul>
+<p>In the client side: </p>
+<ul>
+  <li>JQuery</li>
+  <li>AJAX</li>
+</ul>
+
 # Authors
 
 Luis Antonio Vázquez García
