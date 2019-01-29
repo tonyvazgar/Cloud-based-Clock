@@ -10,13 +10,6 @@
   <li>Client and Server must not be strongly coupled. Use a micro-service architecture. </li>
   <li>It can be mobile or web based app. </li>
 </ul>
-<p> Optional: </p>
-<ul>
-  <li>Attractive Interface</li>
-  <li>Display multiple remote hours</li>
-  <li>Use JSON format for recieving the remote hour.</li>
-  <li>Two or more graphical representations for each displayed time, like analog and digital displays at the same time.</li>
-</ul>
 
 
 <h4> For this project you need: </h4>
