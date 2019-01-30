@@ -13,6 +13,7 @@ function localClock(){
     var hours = (time.getHours()%12).toString();
     var mins = twodigits(time.getMinutes().toString());
     var seconds = twodigits(time.getSeconds().toString());
+    var milisecs = time.getMilliseconds().toString();
 
     if (hours.length < 2) {
         hours = '0' + hours;
@@ -26,10 +27,9 @@ function localClock(){
         seconds = '0' + seconds;
       }
 
-    var finalClock = "Local Time: " + hours + ":" + mins + ":" + seconds;
+    var finalClock = "Local Time: " + hours + ":" + mins + ":" + seconds + "." + milisecs;
     local_clock.textContent = finalClock;
-    document.body.style.background = "#"+seconds+seconds+seconds;
-    console.log("#"+hours+mins+seconds);
+    document.body.style.background = "#"+milisecs;
 }
 
 function obtenerHoraMiServidor(){
@@ -65,12 +65,11 @@ function serverClock() {
         var hours = (t.getHours()%12).toString();
         var mins = twodigits(t.getMinutes().toString());
         var seconds = twodigits(t.getSeconds().toString());
+        var milisecs = t.getMilliseconds().toString();
 
-        var f = hours + " : " + mins + " : " + seconds;
+        var f = hours + ":" + mins + ":" + seconds + "." + milisecs;
 
         server_clock.textContent = "Server Time: " + f;
-        console.log("serverClock() = " + new Date(date));
-
     });
 }
 
@@ -106,10 +105,11 @@ function twodigits(digits){
     return digits;
 }
 
-localClock();
-serverClock();
-console.log("<<<<<<<<<<<>>>>" + sc());
+function runTwo(){
+    localClock();
+    serverClock();
+}
+runTwo();
+setInterval(runTwo, 1000);
 
-setInterval(localClock, 1000);
-setInterval(serverClock, 1000);
 
