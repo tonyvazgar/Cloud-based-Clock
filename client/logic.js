@@ -30,28 +30,6 @@ function localClock(){
     local_clock.textContent = finalClock;
 }
 
-function obtenerHoraMiServidor(){
-	$.ajax({
-		url: 'http://localhost:3000/serverTime',
-		type: 'GET',
-		dataType:"json",
-		cache: false,
-		timeout: function(){
-			console.log("Process completed!");
-		},
-		success:function(response){
-            //console.log("Exito!");
-            construirReloj(response.data);
-            console.log(construirReloj(response.data));
-		},
-		error:function(xhr,status, error){
-			console.log("Error!");
-			console.log(error.message);
-		},
-	});
-}
-
-
 function serverClock() { 
     $.ajax({type: 'GET', url: 'http://localhost:3000'}).done(function(date) {
         var t = new Date(date);
@@ -68,29 +46,6 @@ function serverClock() {
 }
 
 
-
-function sc(){
-    var returnValue;
-	$.ajax({
-		url: 'http://localhost:3000/serverTime',
-        type: 'GET',
-        async: false,
-		dataType:"json",
-        cache: false,
-        contentType: 'application/json; charset=utf-8',
-		timeout: function(){
-			console.log("Process completed!");
-		},
-		success:function(response){
-            //console.log("Exito!");
-            console.log("AAASASAS " + new Date(response.data));
-            returnValue =  response.data;
-		},
-    });
-    return returnValue;
-}
-
-
 /**
  * Function to make the 
  * 
@@ -103,6 +58,9 @@ function twodigits(digits){
     return digits;
 }
 
+/**
+ * Function to update the local
+ */
 function runClocks(){
     localClock();
     serverClock();
