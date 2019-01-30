@@ -5,12 +5,8 @@
 var express = require('express');
 var app = express();
 
-var time = require('time');
-
 /**
  * Returns the current date of the sever
- * 
- * @returns {string}
  */
 function getDateTime() {
 
