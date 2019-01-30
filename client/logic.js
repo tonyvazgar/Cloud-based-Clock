@@ -5,8 +5,11 @@
 var local_clock = document.getElementById('local_clock');
 var server_clock = document.getElementById('server_clock');
 var serverClockDate;
-//var hexColor = document.getElementById('hex');
 
+/**
+ * Function to get the current date of the client
+ * and display it in the screen
+ */
 function localClock(){
     var time = new Date();
 
@@ -17,19 +20,14 @@ function localClock(){
 
     if (hours.length < 2) {
         hours = '0' + hours;
-      }
-    
-      if (mins.length < 2) {
+    }if (mins.length < 2) {
         mins = '0' + mins;
-      }
-    
-      if (seconds.length < 2) {
+    }if (seconds.length < 2) {
         seconds = '0' + seconds;
-      }
+    }
 
     var finalClock = "Local Time: " + hours + ":" + mins + ":" + seconds + "." + milisecs;
     local_clock.textContent = finalClock;
-    document.body.style.background = "#"+milisecs;
 }
 
 function obtenerHoraMiServidor(){
@@ -53,11 +51,6 @@ function obtenerHoraMiServidor(){
 	});
 }
 
-function construirReloj(date){
-    var d = new Date(date);
-    return d;
-}
-
 
 function serverClock() { 
     $.ajax({type: 'GET', url: 'http://localhost:3000'}).done(function(date) {
@@ -70,6 +63,7 @@ function serverClock() {
         var f = hours + ":" + mins + ":" + seconds + "." + milisecs;
 
         server_clock.textContent = "Server Time: " + f;
+        document.body.style.background = "#"+milisecs;
     });
 }
 
@@ -97,7 +91,11 @@ function sc(){
 }
 
 
-
+/**
+ * Function to make the 
+ * 
+ * @returns {string}
+ */
 function twodigits(digits){
     if(digits.length < 2){
         digits = '0' + digits;
@@ -105,11 +103,9 @@ function twodigits(digits){
     return digits;
 }
 
-function runTwo(){
+function runClocks(){
     localClock();
     serverClock();
 }
-runTwo();
-setInterval(runTwo, 1000);
-
-
+runClocks();
+setInterval(runClocks, 1000);
