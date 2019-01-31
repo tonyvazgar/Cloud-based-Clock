@@ -2,12 +2,24 @@
     font-family: myFont;
     src: url('google.ttf');
 }
-body{
-    font-family: 'myFont';
-    text-align: center;
-    font-size: 50px;
-    font-weight: 300;
-    margin-top: 200px;
-    color: white;
+body {
+    background: rgb(255, 255, 255);
 }
 
+.clock_client {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    font-size: 60px;
+    font-family: 'myFont';
+}
+
+.clock_server {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    font-size: 60px;
+    font-family: 'myFont';
+}
