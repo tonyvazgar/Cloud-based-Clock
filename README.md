@@ -27,11 +27,19 @@
 # Instructions
 
 1. Up the server:
-    cd ../Cloud-based-Clock/server/
-    node app.js
-    And you get the message: "Example app listening on port 3000!"
-    Also you can go to http://http://localhost:3000 to see the server response
+```
+cd ../Cloud-based-Clock/server/
+```
+then:
+```
+node app.js
+```
+And you get the message: "Example app listening on port 3000!".
+
+Also you can go to http://http://localhost:3000 to see the server response.
+
 2. Open the "index.html" file inside client folder with a browser, if you can´t see the server hour is because you have not started the server.
+
 # Author
 Luis Antonio Vázquez García
 <details>
