@@ -40,6 +40,14 @@ Also you can go to http://http://localhost:3000 to see the server response.
 
 2. Open the "index.html" file inside client folder with a browser, if you can´t see the server hour is because you have not started the server.
 
+Server Running:
+![alt text](https://raw.githubusercontent.com/tonyvazgar/Cloud-based-Clock/master/Server%20running.png)
+
+
+Server NOT running:
+
+![alt text](https://raw.githubusercontent.com/tonyvazgar/Cloud-based-Clock/master/Server%20not%20running.png)
+
 # Author
 Luis Antonio Vázquez García
 <details>
